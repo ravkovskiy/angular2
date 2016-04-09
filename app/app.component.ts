@@ -1,7 +1,9 @@
 import {Component} from 'angular2/core';
+import {TodoInput} from "./todo-input";
 
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    directives: [TodoInput],
+    template: 'Hello world!<todo-input></todo-input>'
 })
 export class AppComponent { }
