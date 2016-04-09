@@ -4,11 +4,11 @@ import {Component} from "angular2/core";
     selector: 'todo-input',
     template: `<div>
     <input type="text" #myInput>
-    <button (click)="onClick(myInput.value)">Click me</button>
+    <button (click)="onClick(myInput.value, $event)">Click me</button>
     </div>`
 })
 export class TodoInput{
-    onClick(value){
-        console.log(value);
+    onClick(value, event){
+        console.log(value, event);
     }
 }
